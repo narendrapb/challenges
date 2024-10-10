@@ -45,6 +45,5 @@ def user_add(mail,passwd):
     except Exception as e:
         return ("error in creat accout", str(e))
 
-print(user_add("narend@gmail.com","Rowdy@143"))
 
 

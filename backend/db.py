@@ -8,6 +8,7 @@ from sqlalchemy import (
     Integer,
     String,
     update,
+    delete,
 )
 load_dotenv()
 mysql_con = os.getenv("MYSQL_CONN")

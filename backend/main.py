@@ -13,3 +13,10 @@ async def get_home_page():
 @app.post("/create_account")
 async def login_web_account(mail: str,password: str):
   return user_add(mail,password)
+
+@app.post("/passwd_change")
+async def login_web_account(mail: str,passwd: str,new_passwd: str):
+  if passwd==new_passwd:
+    return "Old Password and New Password cannot be same Please Enter Different Password"
+  else:
+    return password_change(mail,new_passwd,passwd)
